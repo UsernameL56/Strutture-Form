@@ -19,6 +19,7 @@ namespace Strutture
         }
         public Prodotto [] P;
         public int indice;
+        string conferma;
         public Form1()
         {
             InitializeComponent();
@@ -41,8 +42,29 @@ namespace Strutture
         }
         private void Cancellazione_Click(object sender, EventArgs e)
         {
-            Cancella(P, ref indice, Nome.Text);
-            visualizza(P);
+            if (Ricerca(P,Nome.Text)== true)
+            {
+                const string message = "Sei sicuro di voler cancellare la parola?";
+                const string caption = "Conferma";
+                var result = MessageBox.Show(message, caption,MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if(result == DialogResult.Yes)
+                {
+                    Cancella(P, ref indice, Nome.Text);
+                    visualizza(P);
+                    MessageBox.Show("Elemento cancellato correttamente");
+                }
+                
+            }else
+                MessageBox.Show("La parola non è presente");
+        }
+
+        private void Update_Click(object sender, EventArgs e)
+        {
+            if (Ricerca(P, Nome.Text) == true)
+            {
+                Modifica(P, Nome.Text, textBox1.Text);
+                visualizza(P);
+            }
         }
 
 
@@ -78,9 +100,46 @@ namespace Strutture
                 }
             }
         }
-        public void Ricerca(Prodotto P)
+
+        public void Modifica(Prodotto[] P, string input, string correzione)
+        {
+            //ciclo per controllare tutto l'array
+            for (int z = 0; z < P.Length; z++)
+            {
+                //arrivati alla posizione della parola errata modificarla con quella nuova inserita
+                if (P[z].nome == input)
+                {
+                    P[z].nome = correzione;
+                }
+            }
+        }
+
+        public bool Ricerca(Prodotto[] P, string input)
+        {
+            bool trovato = true;
+            //ciclo per controllare se l'elemento inserito è presente nell'array
+            for (int i = 0; i < P.Length; i++)
+            {
+                //in base all'input, avremo un output true o false
+                if (P[i].nome == input)
+                {
+                    trovato = true;
+                    //una volta trovato il numero esci dal ciclo
+                    break;
+                }
+                else
+                    trovato = false;
+            }
+            //ritorno in base all'input
+            return trovato;
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
 
         }
+
+
     }
 }
+

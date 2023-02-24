@@ -35,6 +35,9 @@
             this.Salva = new System.Windows.Forms.Button();
             this.Cancellazione = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.Update = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Nome
@@ -71,7 +74,7 @@
             // 
             // Salva
             // 
-            this.Salva.Location = new System.Drawing.Point(110, 151);
+            this.Salva.Location = new System.Drawing.Point(110, 204);
             this.Salva.Name = "Salva";
             this.Salva.Size = new System.Drawing.Size(75, 23);
             this.Salva.TabIndex = 4;
@@ -81,7 +84,7 @@
             // 
             // Cancellazione
             // 
-            this.Cancellazione.Location = new System.Drawing.Point(191, 151);
+            this.Cancellazione.Location = new System.Drawing.Point(191, 204);
             this.Cancellazione.Name = "Cancellazione";
             this.Cancellazione.Size = new System.Drawing.Size(75, 23);
             this.Cancellazione.TabIndex = 5;
@@ -92,18 +95,47 @@
             // listView1
             // 
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(419, 66);
+            this.listView1.Location = new System.Drawing.Point(459, 60);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(147, 323);
+            this.listView1.Size = new System.Drawing.Size(161, 299);
             this.listView1.TabIndex = 6;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.List;
+            // 
+            // Update
+            // 
+            this.Update.Location = new System.Drawing.Point(272, 204);
+            this.Update.Name = "Update";
+            this.Update.Size = new System.Drawing.Size(75, 23);
+            this.Update.TabIndex = 7;
+            this.Update.Text = "Modifica";
+            this.Update.UseVisualStyleBackColor = true;
+            this.Update.Click += new System.EventHandler(this.Update_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(110, 137);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(110, 118);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Modifica";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Update);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.Cancellazione);
             this.Controls.Add(this.Salva);
@@ -128,6 +160,9 @@
         private System.Windows.Forms.Button Salva;
         private System.Windows.Forms.Button Cancellazione;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button Update;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label3;
     }
 }
 
