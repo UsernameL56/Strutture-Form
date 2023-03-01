@@ -20,11 +20,15 @@ namespace Strutture
         public Prodotto [] P;
         public int indice;
         string conferma;
+        float somma;
+        float risultato;
         public Form1()
         {
             InitializeComponent();
             P = new Prodotto[100];
             indice = 0;
+            somma = 0;
+            risultato = 0;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -67,11 +71,37 @@ namespace Strutture
             }
         }
 
+        private void Somma_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < indice; i++)
+            {
+                somma = P[i].prezzo + somma;
+            }
+            MessageBox.Show("La somma del prezzo dei prodottti equivale a: " + somma,"Somma");
+            somma = 0;
+        }
+
+        private void Percentuale_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < indice; i++)
+            {
+                percentuale(P, Convert.ToInt32(textBox2.Text), indice, i);
+                visualizza(P);
+            }
+            
+
+        }
+
+        public void percentuale(Prodotto[] P, int perc, int indice, int i)
+        {
+            P[i].prezzo = P[i].prezzo + ((P[i].prezzo * perc) / 100);
+
+        }
 
 
         public string Pstring(Prodotto P)
         {
-            return "nome: "+ P.nome+"   Prezzo: "+P.prezzo.ToString();
+            return "nome: "+ P.nome+"   Prezzo: "+P.prezzo.ToString("0.00");
         }
         public void visualizza(Prodotto[] PP)
         {

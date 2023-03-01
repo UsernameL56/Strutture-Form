@@ -38,6 +38,10 @@
             this.Update = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Somma = new System.Windows.Forms.Button();
+            this.Percentuale = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Nome
@@ -129,12 +133,52 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "Modifica";
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(266, 137);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(263, 121);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Percentuale";
+            // 
+            // Somma
+            // 
+            this.Somma.Location = new System.Drawing.Point(110, 248);
+            this.Somma.Name = "Somma";
+            this.Somma.Size = new System.Drawing.Size(75, 23);
+            this.Somma.TabIndex = 13;
+            this.Somma.Text = "Somma";
+            this.Somma.UseVisualStyleBackColor = true;
+            this.Somma.Click += new System.EventHandler(this.Somma_Click);
+            // 
+            // Percentuale
+            // 
+            this.Percentuale.Location = new System.Drawing.Point(191, 248);
+            this.Percentuale.Name = "Percentuale";
+            this.Percentuale.Size = new System.Drawing.Size(75, 23);
+            this.Percentuale.TabIndex = 14;
+            this.Percentuale.Text = "Percentuale";
+            this.Percentuale.UseVisualStyleBackColor = true;
+            this.Percentuale.Click += new System.EventHandler(this.Percentuale_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSalmon;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Percentuale);
+            this.Controls.Add(this.Somma);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Update);
@@ -165,6 +209,10 @@
         private System.Windows.Forms.Button Update;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button Somma;
+        private System.Windows.Forms.Button Percentuale;
     }
 }
 
