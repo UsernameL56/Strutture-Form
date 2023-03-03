@@ -42,6 +42,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Somma = new System.Windows.Forms.Button();
             this.Percentuale = new System.Windows.Forms.Button();
+            this.File = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Nome
@@ -61,18 +62,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(107, 60);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(48, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Nome";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(263, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.Size = new System.Drawing.Size(54, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "Prezzo";
             // 
@@ -100,9 +103,9 @@
             // 
             this.listView1.BackColor = System.Drawing.Color.SkyBlue;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(456, 60);
+            this.listView1.Location = new System.Drawing.Point(502, 60);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(273, 347);
+            this.listView1.Size = new System.Drawing.Size(273, 355);
             this.listView1.TabIndex = 6;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.List;
@@ -127,9 +130,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(110, 118);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.Size = new System.Drawing.Size(66, 16);
             this.label3.TabIndex = 9;
             this.label3.Text = "Modifica";
             // 
@@ -143,9 +147,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(263, 121);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(263, 118);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 13);
+            this.label5.Size = new System.Drawing.Size(90, 16);
             this.label5.TabIndex = 12;
             this.label5.Text = "Percentuale";
             // 
@@ -167,14 +172,24 @@
             this.Percentuale.TabIndex = 14;
             this.Percentuale.Text = "Percentuale";
             this.Percentuale.UseVisualStyleBackColor = true;
-            this.Percentuale.Click += new System.EventHandler(this.Percentuale_Click);
+            // 
+            // File
+            // 
+            this.File.Location = new System.Drawing.Point(273, 248);
+            this.File.Name = "File";
+            this.File.Size = new System.Drawing.Size(75, 23);
+            this.File.TabIndex = 15;
+            this.File.Text = "File";
+            this.File.UseVisualStyleBackColor = true;
+            this.File.Click += new System.EventHandler(this.File_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSalmon;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(835, 474);
+            this.Controls.Add(this.File);
             this.Controls.Add(this.Percentuale);
             this.Controls.Add(this.Somma);
             this.Controls.Add(this.label5);
@@ -213,6 +228,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Somma;
         private System.Windows.Forms.Button Percentuale;
+        private System.Windows.Forms.Button File;
     }
 }
 

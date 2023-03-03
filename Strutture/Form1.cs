@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Strutture
 {
@@ -81,21 +82,23 @@ namespace Strutture
             somma = 0;
         }
 
-        private void Percentuale_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < indice; i++)
-            {
-                percentuale(P, Convert.ToInt32(textBox2.Text), indice, i);
-                visualizza(P);
-            }
-            
-
-        }
-
         public void percentuale(Prodotto[] P, int perc, int indice, int i)
         {
             P[i].prezzo = P[i].prezzo + ((P[i].prezzo * perc) / 100);
 
+        }
+
+        private void File_Click(object sender, EventArgs e)
+        {
+            string nFile = @"file.csv";
+
+            using(StreamWriter sw = new StreamWriter(nFile, append:true))
+            {
+                for (int i = 0; i < indice; i++)
+                {
+                    sw.WriteLine("nome: " + P[i].nome + "   Prezzo: " + P[i].prezzo.ToString("0.00"));
+                }
+            }
         }
 
 
@@ -162,11 +165,6 @@ namespace Strutture
             }
             //ritorno in base all'input
             return trovato;
-        }
-
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
-        {
-
         }
 
 

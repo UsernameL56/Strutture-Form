@@ -65,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +79,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\header-Corallo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CORALLI_header_2680x600-scaled-1-1280x287.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coral-HEADER1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\43-437673_pink-fluffy-clouds-hd-desktop-wallpaper-widescreen-hd.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
