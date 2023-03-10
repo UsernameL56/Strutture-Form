@@ -43,6 +43,7 @@
             this.Somma = new System.Windows.Forms.Button();
             this.Percentuale = new System.Windows.Forms.Button();
             this.File = new System.Windows.Forms.Button();
+            this.MaxMin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Nome
@@ -183,12 +184,23 @@
             this.File.UseVisualStyleBackColor = true;
             this.File.Click += new System.EventHandler(this.File_Click);
             // 
+            // MaxMin
+            // 
+            this.MaxMin.Location = new System.Drawing.Point(113, 289);
+            this.MaxMin.Name = "MaxMin";
+            this.MaxMin.Size = new System.Drawing.Size(75, 23);
+            this.MaxMin.TabIndex = 16;
+            this.MaxMin.Text = "Max-Min";
+            this.MaxMin.UseVisualStyleBackColor = true;
+            this.MaxMin.Click += new System.EventHandler(this.MaxMin_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSalmon;
             this.ClientSize = new System.Drawing.Size(835, 474);
+            this.Controls.Add(this.MaxMin);
             this.Controls.Add(this.File);
             this.Controls.Add(this.Percentuale);
             this.Controls.Add(this.Somma);
@@ -229,6 +241,7 @@
         private System.Windows.Forms.Button Somma;
         private System.Windows.Forms.Button Percentuale;
         private System.Windows.Forms.Button File;
+        private System.Windows.Forms.Button MaxMin;
     }
 }
 

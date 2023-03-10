@@ -23,6 +23,7 @@ namespace Strutture
         string conferma;
         float somma;
         float risultato;
+        string nFile;
         public Form1()
         {
             InitializeComponent();
@@ -30,6 +31,7 @@ namespace Strutture
             indice = 0;
             somma = 0;
             risultato = 0;
+            nFile = @"file.csv";
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -61,6 +63,14 @@ namespace Strutture
                 
             }else
                 MessageBox.Show("La parola non è presente");
+
+            using (StreamWriter sw = new StreamWriter(nFile))
+            {
+                for (int i = 0; i < indice; i++)
+                {
+                    sw.WriteLine("nome: " + P[i].nome + "   Prezzo: " + P[i].prezzo.ToString("0.00"));
+                }
+            }
         }
 
         private void Update_Click(object sender, EventArgs e)
@@ -90,8 +100,6 @@ namespace Strutture
 
         private void File_Click(object sender, EventArgs e)
         {
-            string nFile = @"file.csv";
-
             using(StreamWriter sw = new StreamWriter(nFile, append:true))
             {
                 for (int i = 0; i < indice; i++)
@@ -100,6 +108,14 @@ namespace Strutture
                 }
             }
         }
+
+        private void MaxMin_Click(object sender, EventArgs e)
+        {
+            float max = Max(P, indice);
+            float min = Min(P, indice);
+            listView1.Items.Add("Il prezzo massimo è: " + Convert.ToString(max.ToString("0.00") + "     " + "\nIl prezzo minimo è: " + Convert.ToString(min.ToString("0.00"))));
+        }
+
 
 
         public string Pstring(Prodotto P)
@@ -165,6 +181,36 @@ namespace Strutture
             }
             //ritorno in base all'input
             return trovato;
+        }
+
+        public void BubbleSort(Prodotto[] P, int indice)
+        {
+            float temp;
+            for (int z = 0; z < indice-1; z++)
+            {
+                for (int i = 0; i < indice-1; i++)
+                {
+                    if(P[i].prezzo > P[i+1].prezzo)
+                    {
+                        temp = P[i].prezzo;
+                        P[i].prezzo = P[i+1].prezzo;
+                        P[i+1].prezzo = temp;
+                    } 
+                }
+            }
+        }
+        public float Max(Prodotto[] P, int indice)
+        {
+            BubbleSort(P, indice);
+            float max = P[indice - 1].prezzo;
+            return max;
+        }
+
+        public float Min(Prodotto[] P, int indice)
+        {
+            BubbleSort(P, indice);
+            float min = P[0].prezzo;
+            return min;
         }
 
 
