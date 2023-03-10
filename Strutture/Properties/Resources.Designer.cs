@@ -83,6 +83,26 @@ namespace Strutture.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _6879123 {
+            get {
+                object obj = ResourceManager.GetObject("6879123", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _68791231 {
+            get {
+                object obj = ResourceManager.GetObject("68791231", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap coral_HEADER1 {
             get {
                 object obj = ResourceManager.GetObject("coral-HEADER1", resourceCulture);
@@ -96,6 +116,16 @@ namespace Strutture.Properties {
         internal static System.Drawing.Bitmap CORALLI_header_2680x600_scaled_1_1280x287 {
             get {
                 object obj = ResourceManager.GetObject("CORALLI_header_2680x600-scaled-1-1280x287", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fuji {
+            get {
+                object obj = ResourceManager.GetObject("fuji", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

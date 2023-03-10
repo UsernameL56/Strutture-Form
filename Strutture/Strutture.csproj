@@ -98,5 +98,14 @@
   <ItemGroup>
     <None Include="Resources\43-437673_pink-fluffy-clouds-hd-desktop-wallpaper-widescreen-hd.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6879123.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\68791231.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fuji.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

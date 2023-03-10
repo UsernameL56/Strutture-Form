@@ -44,18 +44,19 @@
             this.Percentuale = new System.Windows.Forms.Button();
             this.File = new System.Windows.Forms.Button();
             this.MaxMin = new System.Windows.Forms.Button();
+            this.listView2 = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // Nome
             // 
-            this.Nome.Location = new System.Drawing.Point(110, 76);
+            this.Nome.Location = new System.Drawing.Point(110, 149);
             this.Nome.Name = "Nome";
             this.Nome.Size = new System.Drawing.Size(100, 20);
             this.Nome.TabIndex = 0;
             // 
             // Prezzo
             // 
-            this.Prezzo.Location = new System.Drawing.Point(266, 76);
+            this.Prezzo.Location = new System.Drawing.Point(275, 149);
             this.Prezzo.Name = "Prezzo";
             this.Prezzo.Size = new System.Drawing.Size(100, 20);
             this.Prezzo.TabIndex = 1;
@@ -63,8 +64,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Black;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(107, 60);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(107, 130);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 16);
             this.label1.TabIndex = 2;
@@ -73,8 +76,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Black;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(263, 60);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(272, 130);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 16);
             this.label2.TabIndex = 3;
@@ -82,7 +87,8 @@
             // 
             // Salva
             // 
-            this.Salva.Location = new System.Drawing.Point(110, 204);
+            this.Salva.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Salva.Location = new System.Drawing.Point(110, 329);
             this.Salva.Name = "Salva";
             this.Salva.Size = new System.Drawing.Size(75, 23);
             this.Salva.TabIndex = 4;
@@ -92,9 +98,10 @@
             // 
             // Cancellazione
             // 
-            this.Cancellazione.Location = new System.Drawing.Point(191, 204);
+            this.Cancellazione.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cancellazione.Location = new System.Drawing.Point(191, 329);
             this.Cancellazione.Name = "Cancellazione";
-            this.Cancellazione.Size = new System.Drawing.Size(75, 23);
+            this.Cancellazione.Size = new System.Drawing.Size(103, 23);
             this.Cancellazione.TabIndex = 5;
             this.Cancellazione.Text = "Cancella";
             this.Cancellazione.UseVisualStyleBackColor = true;
@@ -102,9 +109,9 @@
             // 
             // listView1
             // 
-            this.listView1.BackColor = System.Drawing.Color.SkyBlue;
+            this.listView1.BackColor = System.Drawing.Color.IndianRed;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(502, 60);
+            this.listView1.Location = new System.Drawing.Point(505, 74);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(273, 355);
             this.listView1.TabIndex = 6;
@@ -113,7 +120,8 @@
             // 
             // Update
             // 
-            this.Update.Location = new System.Drawing.Point(272, 204);
+            this.Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Update.Location = new System.Drawing.Point(300, 329);
             this.Update.Name = "Update";
             this.Update.Size = new System.Drawing.Size(75, 23);
             this.Update.TabIndex = 7;
@@ -123,7 +131,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(110, 137);
+            this.textBox1.Location = new System.Drawing.Point(110, 224);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 8;
@@ -131,8 +139,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Black;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(110, 118);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(107, 205);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 16);
             this.label3.TabIndex = 9;
@@ -140,7 +150,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(266, 137);
+            this.textBox2.Location = new System.Drawing.Point(275, 224);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 10;
@@ -148,8 +158,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Black;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(263, 118);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(272, 205);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 16);
             this.label5.TabIndex = 12;
@@ -157,7 +169,8 @@
             // 
             // Somma
             // 
-            this.Somma.Location = new System.Drawing.Point(110, 248);
+            this.Somma.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Somma.Location = new System.Drawing.Point(110, 367);
             this.Somma.Name = "Somma";
             this.Somma.Size = new System.Drawing.Size(75, 23);
             this.Somma.TabIndex = 13;
@@ -167,16 +180,18 @@
             // 
             // Percentuale
             // 
-            this.Percentuale.Location = new System.Drawing.Point(191, 248);
+            this.Percentuale.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Percentuale.Location = new System.Drawing.Point(191, 367);
             this.Percentuale.Name = "Percentuale";
-            this.Percentuale.Size = new System.Drawing.Size(75, 23);
+            this.Percentuale.Size = new System.Drawing.Size(103, 23);
             this.Percentuale.TabIndex = 14;
             this.Percentuale.Text = "Percentuale";
             this.Percentuale.UseVisualStyleBackColor = true;
             // 
             // File
             // 
-            this.File.Location = new System.Drawing.Point(273, 248);
+            this.File.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.File.Location = new System.Drawing.Point(300, 367);
             this.File.Name = "File";
             this.File.Size = new System.Drawing.Size(75, 23);
             this.File.TabIndex = 15;
@@ -186,7 +201,8 @@
             // 
             // MaxMin
             // 
-            this.MaxMin.Location = new System.Drawing.Point(113, 289);
+            this.MaxMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaxMin.Location = new System.Drawing.Point(110, 406);
             this.MaxMin.Name = "MaxMin";
             this.MaxMin.Size = new System.Drawing.Size(75, 23);
             this.MaxMin.TabIndex = 16;
@@ -194,11 +210,21 @@
             this.MaxMin.UseVisualStyleBackColor = true;
             this.MaxMin.Click += new System.EventHandler(this.MaxMin_Click);
             // 
+            // listView2
+            // 
+            this.listView2.BackgroundImage = global::Strutture.Properties.Resources.fuji;
+            this.listView2.HideSelection = false;
+            this.listView2.Location = new System.Drawing.Point(-247, -85);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(1095, 669);
+            this.listView2.TabIndex = 17;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSalmon;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(835, 474);
             this.Controls.Add(this.MaxMin);
             this.Controls.Add(this.File);
@@ -216,6 +242,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Prezzo);
             this.Controls.Add(this.Nome);
+            this.Controls.Add(this.listView2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -242,6 +269,7 @@
         private System.Windows.Forms.Button Percentuale;
         private System.Windows.Forms.Button File;
         private System.Windows.Forms.Button MaxMin;
+        private System.Windows.Forms.ListView listView2;
     }
 }
 

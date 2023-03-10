@@ -213,7 +213,6 @@ namespace Strutture
             return min;
         }
 
-
     }
 }
 
