@@ -133,6 +133,16 @@ namespace Strutture.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fuji1 {
+            get {
+                object obj = ResourceManager.GetObject("fuji1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap header_Corallo {
             get {
                 object obj = ResourceManager.GetObject("header-Corallo", resourceCulture);

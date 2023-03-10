@@ -17,6 +17,7 @@ namespace Strutture
         {
             public string nome;
             public float prezzo;
+            public int quantità;
         }
         public Prodotto [] P;
         public int indice;
@@ -44,6 +45,15 @@ namespace Strutture
             P[indice].nome = Nome.Text;
             P[indice].prezzo = float.Parse(Prezzo.Text);
             indice++;
+
+            for (int i = 0; i < indice; i++)
+            {
+                if(P[i].nome == Nome.Text)
+                {
+                    P[i].quantità += 1;
+                }
+                
+            }
             visualizza(P);
             
         }
@@ -120,7 +130,7 @@ namespace Strutture
 
         public string Pstring(Prodotto P)
         {
-            return "nome: "+ P.nome+"   Prezzo: "+P.prezzo.ToString("0.00");
+            return "nome: "+ P.nome+"   Prezzo: "+P.prezzo.ToString("0.00") + "  Quantità: " + P.quantità;
         }
         public void visualizza(Prodotto[] PP)
         {

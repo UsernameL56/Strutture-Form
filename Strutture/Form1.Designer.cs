@@ -212,7 +212,7 @@
             // 
             // listView2
             // 
-            this.listView2.BackgroundImage = global::Strutture.Properties.Resources.fuji;
+            this.listView2.BackgroundImage = global::Strutture.Properties.Resources.fuji1;
             this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(-247, -85);
             this.listView2.Name = "listView2";
