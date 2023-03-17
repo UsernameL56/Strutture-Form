@@ -42,10 +42,11 @@ namespace Strutture
 
         private void Salva_Click(object sender, EventArgs e)
         {
+            //salvataggio nell'array gli input
             P[indice].nome = Nome.Text;
             P[indice].prezzo = float.Parse(Prezzo.Text);
             indice++;
-
+            //ciclo per la quantità
             for (int i = 0; i < indice; i++)
             {
                 if(P[i].nome == Nome.Text)
@@ -57,6 +58,7 @@ namespace Strutture
                     }
                 }
             }
+            //cancellamento degli elementi nelle textbox
             Nome.Clear();
             Prezzo.Clear();
             visualizza(P);
@@ -64,11 +66,14 @@ namespace Strutture
         }
         private void Cancellazione_Click(object sender, EventArgs e)
         {
+            //richiamo funzione di ricerca
             if (Ricerca(P,Nome.Text)== true)
             {
+                //creazione message box per conferma cancellazione
                 const string message = "Sei sicuro di voler cancellare la parola?";
                 const string caption = "Conferma";
                 var result = MessageBox.Show(message, caption,MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                //output in caso la scelta sia SI
                 if(result == DialogResult.Yes)
                 {
                     Cancella(P, ref indice, Nome.Text);
@@ -95,6 +100,7 @@ namespace Strutture
                 Modifica(P, Nome.Text, textBox1.Text);
                 visualizza(P);
             }
+            textBox1.Clear();
         }
 
         private void Somma_Click(object sender, EventArgs e)
