@@ -51,9 +51,14 @@ namespace Strutture
                 if(P[i].nome == Nome.Text)
                 {
                     P[i].quantità += 1;
+                    if(P[i].quantità > 1)
+                    {
+                        indice--;
+                    }
                 }
-                
             }
+            Nome.Clear();
+            Prezzo.Clear();
             visualizza(P);
             
         }
